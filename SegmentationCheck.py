@@ -144,7 +144,7 @@ class VolFracTomog():
 		os.chdir(path)
 		return volfrac
 
-def plotData(comps,fnames=[],n=924,props=([5.6,33.6,0.17],[63.54,26.98])):
+def plotData(comps, path, fnames=[],n=924,props=([5.6,33.6,0.17],[63.54,26.98])):
 	alcu = comp(props[0],props[1])
 	vol = VolFracTomog()
 	act=np.array([])
@@ -153,7 +153,7 @@ def plotData(comps,fnames=[],n=924,props=([5.6,33.6,0.17],[63.54,26.98])):
 	volfrac = np.array([])
 	for fname in fnames:
 		print(fname)
-		volfrac=np.append(volfrac,vol.findVolumeFrac(n,fname))
+		volfrac=np.append(volfrac,vol.findVolumeFrac(n,fname, path))
 	e2=volfrac[[0,4,8]]
 	e3=volfrac[[1,5,9]]
 	e4=volfrac[[2,6,10]]
@@ -182,7 +182,7 @@ def plotData(comps,fnames=[],n=924,props=([5.6,33.6,0.17],[63.54,26.98])):
 	plt.show()
 
 if __name__ == '__main__':
-
+	path = "~/Documents/XMT/"
 	fnames = ["E2-1_","E3-1_","E4-1_","ES-1_","E2-2_","E3-2_","E4-2_","ES-2_","E2-3_","E3-3_","E4-3_","ES-3_"]
 	comps = [6.3,7.2,8.5,13.5]
-	plotData(comps,fnames,924)
+	plotData(comps, fnames, path, 924)
