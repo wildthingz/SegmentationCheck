@@ -185,4 +185,4 @@ if __name__ == '__main__':
 	path = "~/Documents/XMT/"
 	fnames = ["E2-1_","E3-1_","E4-1_","ES-1_","E2-2_","E3-2_","E4-2_","ES-2_","E2-3_","E3-3_","E4-3_","ES-3_"]
 	comps = [6.3,7.2,8.5,13.5]
-	plotData(comps, fnames, path, 924)
+	plotData(comps, path, fnames, 924)
