@@ -1,6 +1,6 @@
 # SegmentationCheck
 
-## Overviwe
+## Overview
 This code is developed to analyze XMT (X-ray microtomography) images from aluminium copper samples. Fig1 shows a reconstruted volume from a set of XMT images.
 <p align="center"><img src=images/img1.png width="500"></p>
 <p align="center"><i>fig1.</i> Reconstruced volume from XMT images.</p>
